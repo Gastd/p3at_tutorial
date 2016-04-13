@@ -1,0 +1,20 @@
+*SPAWN ROBOT IN SIMULATION*
+In two separate terminal windows:
+    * Start the Pioneer 3AT simulation environment:
+        roslaunch p3at_tutorial pioneer3at.gazebo.launch
+
+*DEMO WITHOUT MAP*
+In two separate terminal windows:
+    * Start the Pioneer 3AT simulation environment:
+        roslaunch p3at_tutorial pioneer3at.gazebo.launch
+
+    * Start the move_base demo:
+        roslaunch p3at_tutorial move_base_mapless_demo.launch
+
+*DEMO LOCALIZATION WITH MAP*
+In two separate terminal windows:
+    * Start the Pioneer 3AT simulation environment:
+        roslaunch p3at_tutorial pioneer3at.gazebo.launch
+
+    * Start the amcl demo:
+        roslaunch p3at_tutorial amcl_demo.launch

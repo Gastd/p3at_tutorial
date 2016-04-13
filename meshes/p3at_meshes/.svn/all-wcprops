@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/p/usc-ros-pkg/svn/!svn/ver/86/trunk/p2os/p2os_urdf/meshes/p3at_meshes
+END
+left_hubcap.stl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/p/usc-ros-pkg/svn/!svn/ver/86/trunk/p2os/p2os_urdf/meshes/p3at_meshes/left_hubcap.stl
+END
+chassis.stl
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/p/usc-ros-pkg/svn/!svn/ver/86/trunk/p2os/p2os_urdf/meshes/p3at_meshes/chassis.stl
+END
+right_hubcap.stl
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/p/usc-ros-pkg/svn/!svn/ver/86/trunk/p2os/p2os_urdf/meshes/p3at_meshes/right_hubcap.stl
+END
+back_sonar.stl
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/p/usc-ros-pkg/svn/!svn/ver/86/trunk/p2os/p2os_urdf/meshes/p3at_meshes/back_sonar.stl
+END
+top.stl
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/p/usc-ros-pkg/svn/!svn/ver/86/trunk/p2os/p2os_urdf/meshes/p3at_meshes/top.stl
+END
+wheel.stl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/p/usc-ros-pkg/svn/!svn/ver/86/trunk/p2os/p2os_urdf/meshes/p3at_meshes/wheel.stl
+END
+Coordinates
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/p/usc-ros-pkg/svn/!svn/ver/86/trunk/p2os/p2os_urdf/meshes/p3at_meshes/Coordinates
+END
+axle.stl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/p/usc-ros-pkg/svn/!svn/ver/86/trunk/p2os/p2os_urdf/meshes/p3at_meshes/axle.stl
+END
+front_sonar.stl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/p/usc-ros-pkg/svn/!svn/ver/86/trunk/p2os/p2os_urdf/meshes/p3at_meshes/front_sonar.stl
+END

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- <include file="$(find p3at_tutorial)/launch/pioneer3at.gazebo.launch" /> -->
+
+  <!--- Run Move Base -->  
+  <include file="$(find p3at_tutorial)/launch/move_base.launch">
+    <arg name="no_static_map" value="true"/>
+  </include>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find p3at_tutorial)/launch/navigation.rviz"/>
+
+</launch>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" >
+    <arg name="world_name" value="$(find p3at_tutorial)/worlds/playpen.world"/>
+  </include>
+
+  <include file="$(find p3at_tutorial)/launch/upload_pioneer3at.xml"/>
+
+  <!-- push robot_description to factory and spawn robot in gazebo -->
+  <node name="spawn_pioneer" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model Pioneer3at" respawn="false" output="screen" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find p3at_tutorial)/launch/gazebo.rviz"/>
+   
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+</launch>

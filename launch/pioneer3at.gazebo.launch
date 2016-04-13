@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
   <include file="$(find gazebo_ros)/launch/empty_world.launch" >
-    <arg name="world_name" value="$(find p3at_tutorial)/worlds/scenario1.world"/>
+    <arg name="world_name" value="$(find p3at_tutorial)/worlds/playpen.world"/>
   </include>
 
   <include file="$(find p3at_tutorial)/launch/upload_pioneer3at.xml"/>

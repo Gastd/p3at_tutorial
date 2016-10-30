@@ -473,8 +473,8 @@ name="pioneer3at"
 </xacro:macro>
 <xacro:p3at_front suffix="left" reflect="1"/>
 <xacro:p3at_front suffix="right" reflect="-1"/>
-<xacro:p3at_back suffix="left" reflect="1"/>
-<xacro:p3at_back suffix="right" reflect="-1"/>
+<!-- <xacro:p3at_back suffix="left" reflect="1"/> -->
+<!-- <xacro:p3at_back suffix="right" reflect="-1"/> -->
 <xacro:p3at_gazebo_ext/>
 
 </robot>

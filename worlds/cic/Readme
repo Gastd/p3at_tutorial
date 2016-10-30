@@ -1,0 +1,9 @@
+
+Arquivos para abrir o "mundo" no Gazebo
+
+Simula o primeiro andar do prédio do CIC, para abrir a simulação, utilizar o comando:
+
+gazebo cic.world
+
+Obs: para melhorar a iluminação pode-se inserir o modelo 'Sun', que fica na barra lateral direita
+"Insert", em qualquer posição na simulação.

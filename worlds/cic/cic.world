@@ -13,12 +13,12 @@
       <link name="body">
       <collision name="collision">
         <geometry>
-          <mesh><uri>file://cic.dae</uri></mesh>
+          <mesh><uri>model://cic/cic.dae</uri></mesh>
         </geometry>
       </collision>
         <visual name="visual">
           <geometry>
-            <mesh><uri>file://cic.dae</uri></mesh>
+            <mesh><uri>model://cic/cic.dae</uri></mesh>
           </geometry>
         </visual>
       </link>

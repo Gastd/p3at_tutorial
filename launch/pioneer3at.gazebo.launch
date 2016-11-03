@@ -5,6 +5,7 @@
     <env name="GAZEBO_MODEL_PATH" value="$(arg pkg_gazebo_worlds)/models:$(optenv GAZEBO_MODEL_PATH)"/>
 
     <include file="$(find gazebo_ros)/launch/empty_world.launch" >
+        <!-- To use this world go to https://github.com/Gastd/cic and download the model -->
         <arg name="world_name" value="$(find p3at_tutorial)/worlds/cic/cic.world"/>
     </include>
 

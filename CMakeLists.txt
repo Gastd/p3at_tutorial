@@ -15,9 +15,9 @@ find_package(catkin REQUIRED COMPONENTS
 )
 catkin_package(
  INCLUDE_DIRS include
- LIBRARIES radom_walk
-#  CATKIN_DEPENDS amcl base_local_planner base_local_planner gmapping move_base navfn roslaunch tf urdf xacro
-#  DEPENDS system_lib
+ # LIBRARIES radom_walk
+ CATKIN_DEPENDS amcl base_local_planner base_local_planner gmapping move_base navfn roslaunch tf urdf xacro
+ DEPENDS system_lib
 )
 
 include_directories(
@@ -26,9 +26,9 @@ include_directories(
 )
 
 ## Declare a C++ library
-add_library(random_walk src/random_walk.cpp)
-target_link_libraries(random_walk ${catkin_LIBRARIES})
+# add_library(random_walk src/random_walk.cpp)
+# target_link_libraries(random_walk ${catkin_LIBRARIES})
 
 # Declare a C++ executable
-add_executable(random_walk_node src/random_walk_node.cpp)
-target_link_libraries(random_walk_node random_walk ${catkin_LIBRARIES})
+# add_executable(random_walk_node src/random_walk_node.cpp)
+# target_link_libraries(random_walk_node random_walk ${catkin_LIBRARIES})

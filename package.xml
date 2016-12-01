@@ -11,7 +11,6 @@
   <build_depend>amcl</build_depend>
   <build_depend>base_local_planner</build_depend>
   <build_depend>base_local_planner</build_depend>
-  <build_depend>gmapping</build_depend>
   <build_depend>move_base</build_depend>
   <build_depend>navfn</build_depend>
   <build_depend>roslaunch</build_depend>
@@ -20,7 +19,6 @@
   <build_depend>xacro</build_depend>
   <run_depend>amcl</run_depend>
   <run_depend>base_local_planner</run_depend>
-  <run_depend>gmapping</run_depend>
   <run_depend>move_base</run_depend>
   <run_depend>navfn</run_depend>
   <run_depend>roslaunch</run_depend>

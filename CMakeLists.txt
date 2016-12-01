@@ -5,7 +5,7 @@ find_package(catkin REQUIRED COMPONENTS
   amcl
   base_local_planner
   base_local_planner
-  gmapping
+ 
   move_base
   navfn
   roslaunch
@@ -16,7 +16,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
  INCLUDE_DIRS include
  # LIBRARIES radom_walk
- CATKIN_DEPENDS amcl base_local_planner base_local_planner gmapping move_base navfn roslaunch tf urdf xacro
+ CATKIN_DEPENDS amcl base_local_planner base_local_planner move_base navfn roslaunch tf urdf xacro
  DEPENDS system_lib
 )
 

@@ -18,7 +18,7 @@ name="pioneer3at"
 		<visual name="base_visual">
 			<origin xyz="0 0 0.177" rpy="0 0 0"/>
 			<geometry name="pioneer_geom">
-				<mesh filename="package://p3at_tutorial/meshes/p3at_meshes/chassis.stl"/>
+				<mesh filename="package://fcr2017/meshes/p3at_meshes/chassis.stl"/>
 			</geometry>
 			<material name="ChassisRed">
 				<color rgba="0.851 0.0 0.0 1.0"/>
@@ -27,7 +27,7 @@ name="pioneer3at"
 		<collision>
 			<origin xyz="0 0 0.177" rpy="0 0 0"/>
 				<geometry>
-					<mesh filename="package://p3at_tutorial/meshes/p3at_meshes/chassis.stl"/>
+					<mesh filename="package://fcr2017/meshes/p3at_meshes/chassis.stl"/>
 				</geometry>
 		</collision>
 	</link>
@@ -62,7 +62,7 @@ name="pioneer3at"
 		<visual name="base_visual">
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry name="pioneer_geom">
-				<mesh filename="package://p3at_tutorial/meshes/p3at_meshes/top.stl"/>
+				<mesh filename="package://fcr2017/meshes/p3at_meshes/top.stl"/>
 			</geometry>
 			<material name="TopBlack">
 					<color rgba="0.038 0.038 0.038 1.0"/>
@@ -95,7 +95,7 @@ name="pioneer3at"
 		<visual name="base_visual">
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry name="pioneer_geom">
-				<mesh filename="package://p3at_tutorial/meshes/p3at_meshes/front_sonar.stl"/>
+				<mesh filename="package://fcr2017/meshes/p3at_meshes/front_sonar.stl"/>
 			</geometry>
 			<material name="SonarYellow">
 				<color rgba="0.715 0.583 0.210 1.0"/>
@@ -128,7 +128,7 @@ name="pioneer3at"
 		<visual name="base_visual">
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<geometry name="pioneer_geom">
-				<mesh filename="package://p3at_tutorial/meshes/p3at_meshes/back_sonar.stl"/>
+				<mesh filename="package://fcr2017/meshes/p3at_meshes/back_sonar.stl"/>
 			</geometry>
 			<material name="SonarYellow">
 				<color rgba="0.715 0.583 0.210 1.0"/>
@@ -151,6 +151,66 @@ name="pioneer3at"
 		<child link="back_sonar"/>
 	</joint>
 
+<link name="back_sonar_fake">
+    <inertial>
+            <mass value="0.1"/> 
+            <origin xyz="0 0 0"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0"
+                 iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+<!--     <visual name="base_visual">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry name="pioneer_geom">
+                <mesh filename="package://fcr2017/meshes/p3at_meshes/back_sonar.stl"/>
+            </geometry>
+            <material name="SonarYellow">
+                <color rgba="0.715 0.583 0.210 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0 0 0"/>
+            </geometry>
+        </collision> -->
+</link>
+
+<joint name="base_back_sonar_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 3.1415"/>
+    <parent link="back_sonar"/>
+    <child link="back_sonar_fake"/>
+</joint>
+
+<link name="imu">
+    <inertial>
+            <mass value="0.1"/> 
+            <origin xyz="0 0 0"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0"
+                 iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+<!--     <visual name="base_visual">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry name="pioneer_geom">
+                <mesh filename="package://fcr2017/meshes/p3at_meshes/back_sonar.stl"/>
+            </geometry>
+            <material name="SonarYellow">
+                <color rgba="0.715 0.583 0.210 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0 0 0"/>
+            </geometry>
+        </collision> -->
+</link>
+
+<joint name="imu_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="3.1415 0 0"/>
+    <parent link="base_link"/>
+    <child link="imu"/>
+</joint>
+
 <!-- Front Axles + Wheels + Hubcaps -->
 <xacro:macro name="p3at_front" params="suffix reflect">
 	<link name="p3at_front_${suffix}_axle">
@@ -163,7 +223,7 @@ name="pioneer3at"
 	<visual name="base_visual">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry name="pioneer_geom">
-			<mesh filename="package://p3at_tutorial/meshes/p3at_meshes/axle.stl"/>
+			<mesh filename="package://fcr2017/meshes/p3at_meshes/axle.stl"/>
 		</geometry>
 		<material name="AxleGrey">
 			<color rgba="0.5 0.5 0.5 1"/>
@@ -196,7 +256,7 @@ name="pioneer3at"
 	<visual name="base_visual">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry name="pioneer_geom">
-			<mesh filename="package://p3at_tutorial/meshes/p3at_meshes/${suffix}_hubcap.stl"/>
+			<mesh filename="package://fcr2017/meshes/p3at_meshes/${suffix}_hubcap.stl"/>
 		</geometry>
 		<material name="HubcapYellow">
 			<color rgba="1.0 0.811 0.151 1.0"/>
@@ -229,7 +289,7 @@ name="pioneer3at"
 	<visual name="base_visual">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry name="pioneer_geom">
-			<mesh filename="package://p3at_tutorial/meshes/p3at_meshes/wheel.stl"/>
+			<mesh filename="package://fcr2017/meshes/p3at_meshes/wheel.stl"/>
 		</geometry>
 		<material name="WheelBlack">
 			<color rgba="0.117 0.117 0.117 1"/>
@@ -238,7 +298,7 @@ name="pioneer3at"
 	<collision>
 		<origin xyz="0 0 0" rpy="${-3.1415927/2} 0 0"/>
 		<geometry>
-	    <!--mesh filename="package://p3at_tutorial/meshes/p3at_meshes/wheel.stl"/-->
+	    <!--mesh filename="package://fcr2017/meshes/p3at_meshes/wheel.stl"/-->
 	    <cylinder radius="0.111" length="0.075"/>
 		</geometry>
 	</collision>
@@ -269,7 +329,7 @@ name="pioneer3at"
 	<visual name="base_visual">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry name="pioneer_geom">
-			<mesh filename="package://p3at_tutorial/meshes/p3at_meshes/axle.stl"/>
+			<mesh filename="package://fcr2017/meshes/p3at_meshes/axle.stl"/>
 		</geometry>
 		<material name="AxleGrey">
 			<color rgba="0.5 0.5 0.5 1"/>
@@ -278,7 +338,7 @@ name="pioneer3at"
 	<collision>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry>
-			<mesh filename="package://p3at_tutorial/meshes/p3at_meshes/axle.stl"/>
+			<mesh filename="package://fcr2017/meshes/p3at_meshes/axle.stl"/>
 		</geometry>
 	</collision>
 	</link>
@@ -303,14 +363,14 @@ name="pioneer3at"
 	<visual name="base_visual">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry name="pioneer_geom">
-			<mesh filename="package://p3at_tutorial/meshes/p3at_meshes/${suffix}_hubcap.stl"/>
+			<mesh filename="package://fcr2017/meshes/p3at_meshes/${suffix}_hubcap.stl"/>
 		</geometry>
 		<material name="HubcapYellow"/>
 	</visual>
 	<collision>
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry>
-			<mesh filename="package://p3at_tutorial/meshes/p3at_meshes/${suffix}_hubcap.stl"/>
+			<mesh filename="package://fcr2017/meshes/p3at_meshes/${suffix}_hubcap.stl"/>
 		</geometry>
 	</collision>
 	</link>
@@ -334,14 +394,14 @@ name="pioneer3at"
 	<visual name="base_visual">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<geometry name="pioneer_geom">
-			<mesh filename="package://p3at_tutorial/meshes/p3at_meshes/wheel.stl"/>
+			<mesh filename="package://fcr2017/meshes/p3at_meshes/wheel.stl"/>
 		</geometry>
 		<material name="WheelBlack"/>
 	</visual>
 	<collision>
 		<origin xyz="0 0 0" rpy="${-3.1415927/2} 0 0"/>
 		<geometry>
-	    <!--mesh filename="package://p3at_tutorial/meshes/p3at_meshes/wheel.stl"/-->
+	    <!--mesh filename="package://fcr2017/meshes/p3at_meshes/wheel.stl"/-->
 	    <cylinder radius="0.111" length="0.075"/>
 		</geometry>
 	</collision>
@@ -425,7 +485,7 @@ name="pioneer3at"
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/> 
       <geometry>
-        <mesh filename="package://p3at_tutorial/meshes/hokuyo1.dae"/>
+        <mesh filename="package://fcr2017/meshes/hokuyo1.dae"/>
       </geometry>
     </visual>
     <inertial>
@@ -468,7 +528,102 @@ name="pioneer3at"
         <frameName>hokuyo_link</frameName>
       </plugin>
     </sensor>
-  </gazebo>
+</gazebo>
+
+<gazebo reference="front_sonar">
+    <sensor type="ray" name="front_sonar_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>25</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>8</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.570796</min_angle>
+            <max_angle>1.570796</max_angle>
+<!--             <samples>16</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.919862</min_angle>
+            <max_angle>1.919862</max_angle> -->
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>5.0</max>
+          <resolution>0.1</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. -->
+          <mean>0.0</mean>
+          <stddev>0.1</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_front_sonar_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/front_sonar_raw</topicName>
+        <frameName>front_sonar</frameName>
+      </plugin>
+    </sensor>
+</gazebo>
+
+<gazebo reference="back_sonar_fake">
+    <sensor type="ray" name="back_sonar_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>25</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>8</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.570796</min_angle>
+            <max_angle>1.570796</max_angle>
+<!--             <samples>16</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.919862</min_angle>
+            <max_angle>1.919862</max_angle> -->
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>5.0</max>
+          <resolution>0.1</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. -->
+          <mean>0.0</mean>
+          <stddev>0.1</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_back_sonar_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/back_sonar_raw</topicName>
+        <frameName>back_sonar_fake</frameName>
+      </plugin>
+    </sensor>
+</gazebo>
+
+<gazebo>
+    <plugin name="imu_controller" filename="libhector_gazebo_ros_imu.so">
+        <robotNamespace>/</robotNamespace>
+        <updateRate>50.0</updateRate>
+        <bodyName>imu</bodyName>
+        <topicName>imu/data_raw</topicName>
+        <accelDrift>0.05 0.05 0.05</accelDrift>
+        <accelGaussianNoise>0.05 0.05 0.05</accelGaussianNoise>
+        <rateDrift>0.05 0.05 0.05 </rateDrift>
+        <rateGaussianNoise>0.05 0.05 0.05 </rateGaussianNoise>
+        <headingDrift>0.05</headingDrift>
+        <headingGaussianNoise>0.05</headingGaussianNoise>
+    </plugin>
+</gazebo>
 
 </xacro:macro>
 <xacro:p3at_front suffix="left" reflect="1"/>

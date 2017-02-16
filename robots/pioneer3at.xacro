@@ -502,7 +502,7 @@ name="pioneer3at"
       <ray>
         <scan>
           <horizontal>
-            <samples>720</samples>
+            <samples>1080</samples>
             <resolution>1</resolution>
             <min_angle>-2.3559777</min_angle>
             <max_angle>2.3559777</max_angle>

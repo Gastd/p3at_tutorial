@@ -4,8 +4,6 @@ project(p3at_tutorial)
 find_package(catkin REQUIRED COMPONENTS
   amcl
   base_local_planner
-  base_local_planner
- 
   move_base
   navfn
   roslaunch
@@ -17,7 +15,7 @@ catkin_package(
  INCLUDE_DIRS include
  # LIBRARIES radom_walk
  CATKIN_DEPENDS amcl base_local_planner base_local_planner move_base navfn roslaunch tf urdf xacro
- DEPENDS system_lib
+ DEPENDS
 )
 
 include_directories(

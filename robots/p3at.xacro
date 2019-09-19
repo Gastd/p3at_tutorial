@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="p3at_tutorial">
+
+<xacro:include filename="$(find p3at_tutorial)/robots/pioneer3at_body.xacro"/>
+<!-- <xacro:include filename="$(find cyton_description)/robots/cyton_gazebo_description.urdf"/> -->
+
+<!-- <xacro:include filename="$(find p3at_tutorial)/robots/suporte_p3at_tutorial.urdf"/> -->
+<!-- <xacro:include filename="$(find pr2_description)/urdf/sensors/kinect_camera.urdf.xacro" /> -->
+<xacro:include filename="$(find pr2_description)/urdf/common.xacro" />
+<xacro:p3at_front suffix="left" reflect="1"/>
+<xacro:p3at_front suffix="right" reflect="-1"/>
+<xacro:p3at_back suffix="left" reflect="1"/>
+<xacro:p3at_back suffix="right" reflect="-1"/>
+
+
+<!-- <joint name="pioneer2cyton" type="fixed">
+	<origin xyz="0.08 0.071 0.004" rpy="0 0 0"/>
+		<parent link="top_plate"/>
+		<child link="link0"/>
+</joint> -->
+
+<!-- <joint name="pioneer2suporte" type="fixed">
+	<origin xyz="0.073 0.160 0.004" rpy="0 0 -1.57"/>
+		<parent link="top_plate"/>
+		<child link="suporte_base"/>
+</joint>
+ -->
+<!-- <kinect_camera_v0 name="kinect" parent="suporte_kinect">
+                <origin rpy="0 -3.9246 1.57"  xyz="0.170 0.067 -0.035"/>
+</kinect_camera_v0>
+ -->
+
+
+ <xacro:p3at_gazebo_ext/> 
+
+
+</robot>

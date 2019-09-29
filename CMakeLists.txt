@@ -25,7 +25,8 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(random_walk src/random_walk.cpp)
-# target_link_libraries(random_walk ${catkin_LIBRARIES})
+add_executable(random_walk src/random_walk.cpp src/random_walk_node.cpp)
+target_link_libraries(random_walk ${catkin_LIBRARIES})
 
 # Declare a C++ executable
 add_executable(pose_tf src/pose_tf.cpp)

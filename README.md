@@ -16,7 +16,7 @@ The source code is released under a [MIT license](LICENSE).
 
 **Author and Maintainer: [Gabriel F P Araujo](mailto:gabriel.fp.araujo@gmail.com)<br />
 <!-- Affiliation: [LARA](https://lara.unb.br/)<br /> -->
-<!-- Maintainer: [Gabriel F P Araujo](mailto:gabriel.fp.araujo@gmail.com) and [Raphael Braccialli](mailto:raphael.braccialli@gmail.com)** -->
+<!-- Maintainer: [Gabriel F P Araujo](mailto:gabriel.fp.araujo@gmail.com) and [Raphael Braccialli](mailto:raphael.braccialli@gmail.com) -->**
 
 The consensus package has been tested under Ubuntu 18.04, [ROS Melodic](https://wiki.ros.org/melodic/Installation/Ubuntu) and Gazebo 9.
 
@@ -38,13 +38,7 @@ Config files are in folder config/
 
 ### Launch files
 
-* spawn robot in simulation
-
-Start the Pioneer 3AT simulation environment in terminal:
-
-    roslaunch p3at_tutorial pioneer3at.gazebo.launch
-
-* demo without map
+* Demo without map
 In two terminal windows:
 
 Start the Pioneer 3AT simulation environment:
@@ -55,7 +49,7 @@ Start the move_base demo:
 
     roslaunch p3at_tutorial move_base_mapless_demo.launch
 
-* demo localization with map
+* Demo localization with map
 In two terminal windows:
 
 Start the Pioneer 3AT simulation environment:

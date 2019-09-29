@@ -24,9 +24,9 @@ void RandomWalk::sendNewGoal()
     double y = (double(rand()) / double(RAND_MAX)) * (max_y_-min_y_) + min_y_;
     double yaw = (double(rand()) / double(RAND_MAX)) * 2*M_PI - M_PI;
 
-    goal.target_pose.pose.position.x = 5;
-    goal.target_pose.pose.position.y = -5;
-    goal.target_pose.pose.orientation = tf::createQuaternionMsgFromYaw(3.1415);
+    goal.target_pose.pose.position.x = x;
+    goal.target_pose.pose.position.y = y;
+    goal.target_pose.pose.orientation = tf::createQuaternionMsgFromYaw(yaw);
 
     ROS_INFO("Sending a new goal to move_base x %lf y %lf yaw %lf", x, y, yaw);
 

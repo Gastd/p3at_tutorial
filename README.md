@@ -3,7 +3,7 @@
 ## Overview
 
 Package demo for ROS navigation in Gazebo usingo Pioneer 3AT.
-This package was inspired by the [Husky navigation tutorials](http://wiki.ros.org/husky_navigation/Tutorials/Husky%20AMCL%20Demo). In this package a Pioneer 3AT is simulated with [move_base](http://wiki.ros.org/move_base) as the mobile base controller and [amcl](http://wiki.ros.org/amcl) as localization system.
+This package was inspired by the [Husky navigation tutorials](http://wiki.ros.org/husky_navigation/Tutorials/Husky%20AMCL%20Demo). In this package a Pioneer 3AT is simulated with [move_base] as the mobile base controller and [amcl](http://wiki.ros.org/amcl) as localization system.
 
 <p float="left">
   <img src="/docs/p3at_tutorial_gazebo.gif" width="430" />
@@ -59,3 +59,15 @@ Start the Pioneer 3AT simulation environment:
 Start the amcl demo:
 
     roslaunch p3at_tutorial amcl_demo.launch
+
+## Nodes
+
+### Random Walk
+
+Randomly choose a pose in 10x10 square and send this pose to [move_base] as goal
+
+    rosrun p3at_tutorial random_walk
+
+
+[ROS]: http://www.ros.org
+[move_base]: http://wiki.ros.org/move_base

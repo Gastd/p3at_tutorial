@@ -10,6 +10,9 @@ This package was inspired by the [Husky navigation tutorials](http://wiki.ros.or
   <img src="/docs/p3at_tutorial_rviz.gif" width="430" /> 
 </p>
 
+[![asciicast](https://asciinema.org/a/286151.svg)](https://asciinema.org/a/286151)
+<script id="asciicast-286151" src="https://asciinema.org/a/286151.js" async></script>
+
 ## License
 
 The source code is released under a [MIT license](LICENSE).

@@ -11,7 +11,6 @@ This package was inspired by the [Husky navigation tutorials](http://wiki.ros.or
 </p>
 
 [![asciicast](https://asciinema.org/a/286151.svg)](https://asciinema.org/a/286151)
-<script id="asciicast-286151" src="https://asciinema.org/a/286151.js" async></script>
 
 ## License
 

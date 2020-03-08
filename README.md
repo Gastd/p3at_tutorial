@@ -18,7 +18,7 @@ The source code is released under a [MIT license](LICENSE).
 <!-- Affiliation: [LARA](https://lara.unb.br/)<br /> -->
 <!-- Maintainer: [Gabriel F P Araujo](mailto:gabriel.fp.araujo@gmail.com) and [Raphael Braccialli](mailto:raphael.braccialli@gmail.com) -->**
 
-The consensus package has been tested under Ubuntu 18.04, [ROS Melodic](https://wiki.ros.org/melodic/Installation/Ubuntu) and Gazebo 9.
+The p3at_tutorial package has been tested under Ubuntu 18.04, [ROS Melodic](https://wiki.ros.org/melodic/Installation/Ubuntu) and Gazebo 9.
 
 
 <!-- This is research code, expect that it changes often and any fitness for a particular purpose is disclaimed. -->

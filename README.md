@@ -26,7 +26,14 @@ The p3at_tutorial package has been tested under Ubuntu 18.04, [ROS Melodic](http
 <!-- This is research code, expect that it changes often and any fitness for a particular purpose is disclaimed. -->
 
 
+
 ## Usage
+
+### Dependencies
+
+The package depends of the following packages:
+
+    sudo apt install ros-melodic-navigation ros-melodic-pr2-description
 
 ### Config files
 

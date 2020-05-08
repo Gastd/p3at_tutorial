@@ -16,9 +16,9 @@ This package was inspired by the [Husky navigation tutorials](http://wiki.ros.or
 
 The source code is released under a [MIT license](LICENSE).
 
-**Author and Maintainer: [Gabriel F P Araujo](mailto:gabriel.fp.araujo@gmail.com)<br />
+**Author and Maintainer: [Gabriel F P Araujo](mailto:gabriel.fp.araujo@gmail.com)**
 <!-- Affiliation: [LARA](https://lara.unb.br/)<br /> -->
-<!-- Maintainer: [Gabriel F P Araujo](mailto:gabriel.fp.araujo@gmail.com) and [Raphael Braccialli](mailto:raphael.braccialli@gmail.com) -->**
+<!-- Maintainer: [Gabriel F P Araujo](mailto:gabriel.fp.araujo@gmail.com) and [Raphael Braccialli](mailto:raphael.braccialli@gmail.com) -->
 
 The p3at_tutorial package has been tested under Ubuntu 18.04, [ROS Melodic](https://wiki.ros.org/melodic/Installation/Ubuntu) and Gazebo 9.
 
